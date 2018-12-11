@@ -41,7 +41,7 @@ public class ColegioProyect {
  ///
  
      Paralelo NewParalelo;
-       NewParalelo=new Paralelo(0,"Paralelo F",2);
+       NewParalelo=new Paralelo(0,"Paralelo z",2);
         if(paralelo.Create(NewParalelo)==1){
             System.out.println("*** Paralelo Creado Con exito ***");
         }
