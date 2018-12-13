@@ -106,7 +106,7 @@ public class ColegioProyect {
 //        }
 //        
 
-           System.out.println(usuario.Delete(6)); 
+    //       System.out.println(usuario.Delete(6)); 
 
              
         
