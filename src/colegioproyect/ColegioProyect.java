@@ -6,9 +6,17 @@
 package colegioproyect;
 
 import Controllers.ColegioController;
+import Controllers.MateriaController;
 import Controllers.ParaleloController;
+import Controllers.UsuarioController;
 import Models.Colegio;
+import Models.Materia;
 import Models.Paralelo;
+import Models.Usuario;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -40,20 +48,75 @@ public class ColegioProyect {
  //
  ///
  
-     Paralelo NewParalelo;
-       NewParalelo=new Paralelo(0,"Paralelo z",2);
-        if(paralelo.Create(NewParalelo)==1){
-            System.out.println("*** Paralelo Creado Con exito ***");
-        }
-        else{
-         System.out.println("*** Error ***");   
-        }
-        // TODO code application logic here
+//     Paralelo NewParalelo;
+//       NewParalelo=new Paralelo(0,"Paralelo z",2);
+//        if(paralelo.Create(NewParalelo)==1){
+//            System.out.println("*** Paralelo Creado Con exito ***");
+//        }
+//        else{
+//         System.out.println("*** Error ***");   
+//        }
+//        // TODO code application logic here
+//        
+//        List<Paralelo> paralelos=paralelo.Select();
+//         paralelos.forEach((item) -> {
+//            System.out.println(item.getNombre());
+//        });
+//
+//    MateriaController materia= new MateriaController();
+////        Materia newMateria;
+////         newMateria =new Materia(8,"Gramatica 5","Dibujo tecnico y manualidades","10 CREDITOD");
+////         
+////                int id=materia.Update(newMateria);
+////                 if(id!=0){
+////            System.out.println("*** Paralelo Creado Con exito ***  "+id);
+////        }
+////        else{
+////         System.out.println("*** Error ***");   
+////        }
+////        
+//
+//   //        System.out.println(materia.Delete(8)); 
+//
+//             
+//        
+//        List<Materia> materias=materia.Select("grama");
+//         materias.forEach((item) -> {
+//            System.out.println(item.getNombre());
+//        });
+//         
+//       //  System.out.println(materia.Select(2).getNombre());
+           
+
+
+
+    UsuarioController usuario= new UsuarioController();
+//        Usuario newUsuario;
+//        java.util.Date d = new java.util.Date(); 
+//java.sql.Date date2 = new java.sql.Date(d.getTime());
+//        
+//         newUsuario =new Usuario(5,"Moises8","Armando xelio","Masulino",date2,"Estudiante");
+//         
+//                int id=usuario.Update(newUsuario);
+//                 if(id!=0){
+//            System.out.println("*** Paralelo Creado Con exito ***  "+id);
+//        }
+//        else{
+//         System.out.println("*** Error ***");   
+//        }
+//        
+
+           System.out.println(usuario.Delete(6)); 
+
+             
         
-        List<Paralelo> paralelos=paralelo.Select();
-         paralelos.forEach((item) -> {
-            System.out.println(item.getNombre());
-        });
+//        List<Usuario> usuarios=usuario.Select("lo");
+//         usuarios.forEach((item) -> {
+//            System.out.println(item.getNombre());
+//        });
+//         
+//         System.out.println(usuario.Select(2).getNombre());
+        
     }
     
 }
