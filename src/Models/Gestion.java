@@ -5,6 +5,7 @@
  */
 package Models;
 
+
 import java.util.Date;
 
 /**
@@ -13,10 +14,10 @@ import java.util.Date;
  */
 public class Gestion {
     private int id;
-    private Date yearRegistro;
-    private char gestion;
+    private String yearRegistro;
+    private String gestion;
     
-    public Gestion(int id, Date yearReg, char gestion)
+    public Gestion(int id, String yearReg, String gestion)
     {
         this.id=id;
         this.yearRegistro=yearReg;
@@ -31,20 +32,20 @@ public class Gestion {
         this.id= id;
     }
     
-    public Date getYearRegistro()
+    public String getYearRegistro()
     {
         return this.yearRegistro;
     }
-    public void setYearRegistro(Date yearreg)
+    public void setYearRegistro(String yearreg)
     {
         this.yearRegistro = yearreg;
     }
     
-    public char getGestion()
+    public String getGestion()
     {
         return this.gestion;
     }
-    public void setGestion(char gestion)
+    public void setGestion(String gestion)
     {
         this.gestion= gestion;
     }
