@@ -8,42 +8,31 @@ package colegioproyect;
 import Controllers.ColegioController;
 import Controllers.MateriaController;
 import Controllers.ParaleloController;
-<<<<<<< HEAD
 import Controllers.RegistroController;
 import Controllers.TomaMateriasController;
-=======
 import Controllers.TiempoEvaluacionController;
 import Controllers.RegistroNotasController;
 import Controllers.EvaluacionProfesorController;
 import Controllers.GestionController;
-//<<<<<<< HEAD
 import Controllers.CursoMateriaController;
-//=======
->>>>>>> 9837d1e27a333165e66de16a220d73cb6cd7fa6e
 import Controllers.UsuarioController;
-//>>>>>>> 76205318247582f2b65f391e9206649ff7d18372
+
 import Models.Colegio;
 import Models.Materia;
 import Models.Paralelo;
-<<<<<<< HEAD
 import Models.Registro;
 import Models.TomaMaterias;
-=======
 import Models.Tiempo_Evaluacion;
 import Models.Registro_Notas;
 import Models.Evaluacion_Profesor;
 import Models.Gestion;
-//<<<<<<< HEAD
 import Models.Curso_Materia;
-//=======
->>>>>>> 9837d1e27a333165e66de16a220d73cb6cd7fa6e
 import Models.Usuario;
 import java.sql.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-//>>>>>>> 76205318247582f2b65f391e9206649ff7d18372
 import java.util.List;
 
 /**
@@ -80,7 +69,6 @@ public class ColegioProyect {
  //
  ///
  
-//<<<<<<< HEAD
      Paralelo NewParalelo;
      Curso_Materia nuevoCurso;
      Tiempo_Evaluacion nuevotiempoeva;
@@ -281,8 +269,7 @@ java.sql.Date date2 = new java.sql.Date(d.getTime());
          System.out.println("*** Error ***");   
         }
 
-        
-////>>>>>>> 76205318247582f2b65f391e9206649ff7d18372
+     
     }
     
 }
