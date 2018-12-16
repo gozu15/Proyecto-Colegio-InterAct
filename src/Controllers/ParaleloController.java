@@ -28,4 +28,5 @@ public class ParaleloController {
     public List<Paralelo> Select(){
         return DbParalelo.Select();
     }   
+    
 }
