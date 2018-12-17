@@ -15,17 +15,27 @@ public class Usuario {
      private int id;
     private String Nombre;
     private String Apellidos;
+    private String Carnet;
     private String Genero;
     private Date FechaNacimiento;
     private String TipoDeUsuario;
 
-    public Usuario(int id, String Nombre, String Apellidos, String Genero, Date FechaNacimiento, String TipoDeUsuario) {
+    public Usuario(int id, String Nombre, String Apellidos, String Carnet, String Genero, Date FechaNacimiento, String TipoDeUsuario) {
         this.id = id;
         this.Nombre = Nombre;
         this.Apellidos = Apellidos;
+        this.Carnet=Carnet;
         this.Genero = Genero;
         this.FechaNacimiento = FechaNacimiento;
         this.TipoDeUsuario = TipoDeUsuario;
+    }
+
+    public String getCarnet() {
+        return Carnet;
+    }
+
+    public void setCarnet(String Carnet) {
+        this.Carnet = Carnet;
     }
 
     public int getId() {
