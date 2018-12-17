@@ -6,6 +6,7 @@
 package Controllers;
 
 import DataBaseManager.UsuarioDataBase;
+import Models.LoginViewModel;
 import Models.Usuario;
 import java.util.List;
 
@@ -16,14 +17,17 @@ import java.util.List;
 public class UsuarioController {
     UsuarioDataBase DbUsuario=new UsuarioDataBase();
     public int Create(Usuario usuario){
-        
+       //  System.out.println("szdxfcghjksdfgh"); 
+        String apellidos= usuario.getApellidos().replace(" ", "").toLowerCase();  
+           String password= usuario.getFechaNacimiento().toString().replace("-" ,"")+apellidos; 
+              
         int response =DbUsuario.Insert(usuario);
         if(response!=0){
-            
+            int idlogin=DbUsuario.CreateLogin(new LoginViewModel(usuario.getCarnet(),password,0),response);
         }else{
             response=0;
         }
-        return response;
+        return 1;
     }
     public List<Usuario> Select(){
         return DbUsuario.SelectUsuarios();
@@ -56,4 +60,7 @@ public class UsuarioController {
         }
         return response;
     }
+      public Usuario Login(LoginViewModel login){
+          return DbUsuario.Login(login);
+      }
 }

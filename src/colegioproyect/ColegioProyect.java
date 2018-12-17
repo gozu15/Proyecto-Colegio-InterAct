@@ -27,6 +27,7 @@ import Models.Registro_Notas;
 import Models.Evaluacion_Profesor;
 import Models.Gestion;
 import Models.Curso_Materia;
+import Models.LoginViewModel;
 import Models.Usuario;
 import java.sql.Date;
 import java.text.DateFormat;
@@ -76,21 +77,21 @@ public class ColegioProyect {
      Evaluacion_Profesor evaprofe;
      Gestion nuevagestion;
      //nuevanota = new Registro_Notas(5,"70",3);
-     nuevagestion = new Gestion(5,"20181220","2");
+//     nuevagestion = new Gestion(5,"20181220","2");
     // evaprofe = new Evaluacion_Profesor(3,"SEGUNDA EVALUACION",2,5);
      
-     if(gestion.Delete(nuevagestion)==1){
-            System.out.println("*** Paralelo actualizado Con exito ***");
-        }
-        else{
-         System.out.println("*** Error ***");   
-        }
-      
-       List<Gestion> reggestion= gestion.Select();
-         reggestion.forEach((item) -> {
-            System.out.println(item.getYearRegistro());
-        });
-     
+//     if(gestion.Delete(nuevagestion)==1){
+//            System.out.println("*** Paralelo actualizado Con exito ***");
+//        }
+//        else{
+//         System.out.println("*** Error ***");   
+//        }
+//      
+//       List<Gestion> reggestion= gestion.Select();
+//         reggestion.forEach((item) -> {
+//            System.out.println(item.getYearRegistro());
+//        });
+//     
      //nuevotiempoeva = new Tiempo_Evaluacion(7,"Primer Semestre");
       /*if(evaluacionProfesor.Delete(evaprofe)==1){
             System.out.println("*** Paralelo actualizado Con exito ***");
@@ -193,16 +194,16 @@ public class ColegioProyect {
 
 
 
-    UsuarioController usuario= new UsuarioController();
+//    UsuarioController usuario= new UsuarioController();
 //        Usuario newUsuario;
 //        java.util.Date d = new java.util.Date(); 
 //java.sql.Date date2 = new java.sql.Date(d.getTime());
 //        
-//         newUsuario =new Usuario(5,"Moises8","Armando xelio","Masulino",date2,"Estudiante");
+//         newUsuario =new Usuario(0,"Moises9","Armando celio","938377664","Masulino",date2,"Estudiante");
 //         
-//                int id=usuario.Update(newUsuario);
+//                int id=usuario.Create(newUsuario);
 //                 if(id!=0){
-//            System.out.println("*** Paralelo Creado Con exito ***  "+id);
+//            System.out.println("*** usuario Creado Con exito ***  "+id);
 //        }
 //        else{
 //         System.out.println("*** Error ***");   
@@ -251,25 +252,33 @@ public class ColegioProyect {
 //        });
 //         
 //         System.out.println(registro.Select(2).getCategoriaEstudio());
+//
+//TomaMateriasController tomas= new TomaMateriasController();
+//
+// TomaMaterias newtoma;
+//        java.util.Date d = new java.util.Date(); 
+//java.sql.Date date2 = new java.sql.Date(d.getTime());
+//        
+//        newtoma =new TomaMaterias(0,date2,3,1);
+//        int [] Materias={1,2,3,4,5};
+//         
+//                int id=tomas.EstudianteToma(newtoma,Materias);
+//                 if(id!=0){
+//            System.out.println("*** Tomas con exito ***  "+id);
+//        }
+//        else{
+//         System.out.println("*** Error ***");   
+//        }
 
-TomaMateriasController tomas= new TomaMateriasController();
 
- TomaMaterias newtoma;
-        java.util.Date d = new java.util.Date(); 
-java.sql.Date date2 = new java.sql.Date(d.getTime());
-        
-        newtoma =new TomaMaterias(0,date2,3,1);
-        int [] Materias={1,2,3,4,5};
-         
-                int id=tomas.EstudianteToma(newtoma,Materias);
-                 if(id!=0){
-            System.out.println("*** Tomas con exito ***  "+id);
-        }
-        else{
-         System.out.println("*** Error ***");   
-        }
-
-     
-    }
+//   Usuario user;
+//        user = usuario.Login(new LoginViewModel("272727272","19950718jacksonmamani",0));
+//        if(user !=null){
+//           System.out.println("*** positivo ***");   
+//        }
+//        else{
+//            System.out.println("*** Error ***");   
+//        }
+   }
     
 }
