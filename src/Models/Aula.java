@@ -7,19 +7,17 @@ package Models;
 
 /**
  *
- * @author Wilver Hidalgo Barja
+ * @author Elvis Quiroz
  */
-public class Curso {
+public class Aula {
     private int id;
     private String Nombre;
-    private int Horario;
-    private int Aula;
-    
-    public Curso(int id, String Nombre, int Horario, int Aula) {
+    private String Descripcion;
+
+    public Aula(int id, String Nombre, String Descripcion) {
         this.id = id;
         this.Nombre = Nombre;
-        this.Horario = Horario;
-        this.Aula = Aula;
+        this.Descripcion = Descripcion;
     }
 
     public int getId() {
@@ -38,19 +36,11 @@ public class Curso {
         this.Nombre = Nombre;
     }
 
-    public int getHorario() {
-        return Horario;
+    public String getDescripcion() {
+        return Descripcion;
     }
 
-    public void setHorario(int Horario) {
-        this.Horario = Horario;
+    public void setDescripcion(String Descripcion) {
+        this.Descripcion = Descripcion;
     }
-    public int getAula() {
-        return Aula;
-    }
-
-    public void setAula(int Aula) {
-        this.Aula = Aula;
-    }
-    
 }

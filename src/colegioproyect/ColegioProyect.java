@@ -5,11 +5,17 @@
  */
 package colegioproyect;
 
+import Controllers.AulaController;
 import Controllers.ColegioController;
+import Controllers.CursoController;
+import Controllers.HorariosController;
 import Controllers.MateriaController;
 import Controllers.ParaleloController;
 import Controllers.UsuarioController;
+import Models.Aula;
 import Models.Colegio;
+import Models.Curso;
+import Models.Horarios;
 import Models.Materia;
 import Models.Paralelo;
 import Models.Usuario;
@@ -30,7 +36,7 @@ public class ColegioProyect {
      */
     public static void main(String[] args) {
        // ColegioController colegio= new ColegioController();
-        ParaleloController paralelo= new ParaleloController();
+        //ParaleloController paralelo= new ParaleloController();
 //        Colegio NewColegio;
 //        NewColegio=new Colegio(0,"Camilo",5);
 //        if(colegio.Create(NewColegio)==1){
@@ -44,7 +50,15 @@ public class ColegioProyect {
  //Colegio Lista= colegio.Select();
      
  //System.out.println(Lista.getNombre());
- 
+       ParaleloController paralelo=new ParaleloController();
+       Paralelo NewParalelo;
+       NewParalelo=new Paralelo(4,"X",4);
+        if(paralelo.Update(NewParalelo)==1){
+            System.out.println("*** Hello Creado Con exito ***");
+        }
+        else{
+         System.out.println("*** Error ***");   
+        }
  //
  ///
  
@@ -58,10 +72,10 @@ public class ColegioProyect {
 //        }
 //        // TODO code application logic here
 //        
-//        List<Paralelo> paralelos=paralelo.Select();
-//         paralelos.forEach((item) -> {
-//            System.out.println(item.getNombre());
-//        });
+        List<Paralelo>listparalelo =paralelo.Select();
+         listparalelo.forEach((item) -> {
+            System.out.println(item.getNombre());
+        });
 //
 //    MateriaController materia= new MateriaController();
 ////        Materia newMateria;
@@ -90,7 +104,7 @@ public class ColegioProyect {
 
 
 
-    UsuarioController usuario= new UsuarioController();
+    //UsuarioController usuario= new UsuarioController();
 //        Usuario newUsuario;
 //        java.util.Date d = new java.util.Date(); 
 //java.sql.Date date2 = new java.sql.Date(d.getTime());

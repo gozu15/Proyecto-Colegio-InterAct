@@ -5,32 +5,40 @@
  */
 package Controllers;
 
-import DataBaseManager.ParaleloDataBase;
-import Models.Paralelo;
+import DataBaseManager.AulaDataBase;
+import Models.Aula;
 import java.util.List;
 
 /**
  *
- * @author Wilver Hidalgo Barja
+ * @author Elvis Quiroz
  */
-public class ParaleloController {
-   ParaleloDataBase DbParalelo=new ParaleloDataBase();
-    public int Create(Paralelo paralelo){
+public class AulaController {
+    AulaDataBase DbAula=new AulaDataBase();
+    public int Create(Aula aula){
         
-        int response=1;
-        if(DbParalelo.Insert(paralelo)==1){
+        int response =DbAula.Insert(aula);
+        if(response!=0){
             
         }else{
             response=0;
         }
         return response;
     }
-    public List<Paralelo> Select(){
-        return DbParalelo.Select();
+    public List<Aula> Select(){
+        return DbAula.SelectAula();
     }   
-    public int Update(Paralelo paralelo){
+    
+     public List<Aula> Select(String terimo){
+        return DbAula.BuscarAula(terimo);
+    }  
+     
+    public Aula Select(int id){
+        return DbAula.SelectAula(id);
+    }
+     public int Update(Aula aula){
         
-        int response =DbParalelo.Update(paralelo);
+        int response =DbAula.Update(aula);
         if(response!=0){
             
         }else{
@@ -40,7 +48,7 @@ public class ParaleloController {
     }
       public int Delete(int id){
         
-        int response =DbParalelo.Delete(id);
+        int response =DbAula.Delete(id);
         if(response!=0){
             
         }else{
